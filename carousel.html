@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+</head>
+<body>
+    
+    <div class="carousel">
+        <img id="image" src="https://upload.wikimedia.org/wikipedia/commons/1/1a/24701-nature-natural-beauty.jpg" alt="Image">
+        <button onclick="changeImage(-1)">Previous Image</button>
+        <button onclick="changeImage(1)">Next Image</button>
+    </div>
+
+    <script>
+        const imageUrls = ["https://upload.wikimedia.org/wikipedia/commons/1/1a/24701-nature-natural-beauty.jpg",
+            "https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg?w=600&quality=80",
+            "https://www.shutterstock.com/image-photo/mountains-during-sunset-beautiful-natural-260nw-407021107.jpg"
+        ];
+        let currentIndex = 0;
+        const imageElement = document.getElementById("image");
+
+        function changeImage(direction) {
+            currentIndex = (currentIndex + direction + imageUrls.length) % imageUrls.length; imageElement.src = imageUrls[currentIndex];
+        }
+    </script>
+</body>
+</html>

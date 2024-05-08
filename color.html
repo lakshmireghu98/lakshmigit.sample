@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color</title>
+    <style>
+        .myPara {
+            font-size: medium;
+            font-style: italic;
+        }
+    </style>
+</head>
+ <body>
+        
+            <div class="myPara">
+
+            <p id="myPara">Flower, the characteristic reproductive structure of angiosperms. As popularly used, the term “flower” especially applies when part or all of the reproductive structure is distinctive in colour and form.
+
+            </p>
+            <button id="colorButton">Change here</button>
+            <script>
+
+
+                const colorButton = document.getElementById('colorButton');
+                const myColor = document.getElementById('myPara');
+
+                const colors = ['#5DE2E7','#060270','#eb4034'];
+                
+        colorButton.addEventListener('click', () => {
+            const randomIndex = Math.floor(Math.random() * colors.length);
+            const randomColor = colors[randomIndex];
+
+
+                    
+
+                    myColor.style.color = randomColor;
+                });
+            </script>
+
+        </div>
+    </body>
+    
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Greeting</title>
+    <style>
+        body {
+            background-color: aqua;
+        }
+        .myDiv {
+              text-align:center;
+        
+        }
+    </style>
+    </head>
+    <body>
+        
+        <div class="myDiv">
+            
+            <h1>Welcome.....</h1>
+            <button id="greetButton">Click here!</button>
+            <p id="greetingMessage"></p>
+
+            <script>
+                                const greetButton = document.getElementById('greetButton');
+
+                        const greetingMessage = document.getElementById('greetingMessage');
+
+                        greetButton.addEventListener('click', () => {
+
+
+                    
+                            greetingMessage.textContent = 'Hello, user! Have a great day!';
+                        
+                        });
+
+
+
+            </script>
+
+        </div>
+    </body>
+    </html>
